@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* Colors */
+:root {
+  --primary-accent: #c83d95;
+  --primary-secondary: #70b0e0;
+  --light-gray: #f9f9f9;
+  --dark-gray: #222;
+}
+
+/* Navigation */
+header {
+  background: white;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-secondary);
+}
+
+.donate-btn {
+  background: var(--primary-accent);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  background: #d85dad;
+  transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* Blurred background */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('Snip20251013_19.png') center center / cover no-repeat;
+  filter: blur(12px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Centered image */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 271px;
+  height: 302px;
+  background: url('Snip20251013_19.png') center center / contain no-repeat;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  background: var(--primary-accent);
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #d85dad;
+  transform: translateY(-3px);
+}
+
+/* Mission / Impact / Donate sections */
+.mission, .impact, .donate {
+  text-align: center;
+  padding: 4rem 2rem;
+  margin-top: 1rem;
+}
+
+.mission h2, .impact h2, .donate h2 {
+  color: var(--primary-secondary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission p, .donate p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+.impact {
+  background: white;
+}
+
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: var(--light-gray);
+  padding: 2rem;
+  border-radius: 10px;
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.stat h3 {
+  color: var(--primary-accent);
+  font-size: 2rem;
+}
+
+/* Donate Section */
+.donate {
+  background: var(--primary-secondary);
+  color: white;
+}
+
+.donate-main-btn {
+  display: inline-block;
+  background: var(--primary-accent);
+  color: black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.donate-main-btn:hover {
+  background: #d85dad;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-gray);
+  color: #eee;
+  padding-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem 2rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 0.8rem;
+  color: var(--primary-accent);
+  font-size: 1.1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--p
