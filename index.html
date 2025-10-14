@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="charity: water - 100% of public donations fund clean water projects with proof. Your contribution makes a visible impact.">
+  <title>charity: water | Your Money, Our Mission, and Our Planet's Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="main-nav">
+      <a href="#" class="logo">
+        <img src="Snip20251013_15.png" alt="charity: water logo">
+      </a>
+      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#mission">Our Mission</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#donate" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Clean Water, Clear Accountability.</h1>
+      <p>Because real change starts with transparency and ends with measurable impact.</p>
+      <a href="#donate" class="hero-btn">Join the Mission</a>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="mission">
+    <h2>Our Mission</h2>
+    <p>Track your impact through open data reporting. Transform lives through well construction to community maintenance. Together, change can be measurable through accountability and transparency.</p>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="impact">
+    <h2>Our Impact</h2>
+    <div class="impact-stats">
+      <div class="stat">
+        <h3>150,000+</h3>
+        <p>Water Projects Funded</p>
+      </div>
+      <div class="stat">
+        <h3>17 Million+</h3>
+        <p>People Served</p>
+      </div>
+      <div class="stat">
+        <h3>29</h3>
+        <p>Countries Reached</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Section -->
+  <section id="donate" class="donate">
+    <h2>Make a Difference</h2>
+    <p>Your support helps build sustainable water systems, empowering communities for generations.</p>
+    <a href="#" class="donate-main-btn">Donate Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#">Transparency</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="#">Fundraise</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#donate">Donate</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 charity: water | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileToggle.innerHTML = navLinks.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+  </script>
+</body>
+</html>
