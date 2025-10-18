@@ -16,6 +16,7 @@
 
 body {
   color: #333;
+  background: #fff;
 }
 
 /* Navigation */
@@ -104,10 +105,21 @@ header {
   background: var(--light-gray);
 }
 
+.mission h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
 /* Impact Section */
 .impact {
   padding: 4rem 2rem;
   text-align: center;
+}
+
+.impact h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .impact-stats {
@@ -117,17 +129,53 @@ header {
   flex-wrap: wrap;
 }
 
-.stat h3 {
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
   font-size: 2rem;
   color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  color: #555;
 }
 
 /* Donation Section */
 .donate {
   padding: 4rem 2rem;
-  text-align: center;
-  background: var(--secondary);
+  background: linear-gradient(135deg, var(--secondary), #4a90e2);
   color: #fff;
+  text-align: center;
+}
+
+.donate-container {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.1);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.donate h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.donate p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .donate-main-btn {
@@ -136,6 +184,12 @@ header {
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.donate-main-btn:hover {
+  transform: translateY(-3px);
 }
 
 /* Footer */
