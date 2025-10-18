@@ -1,124 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="charity: water - 100% of public donations fund clean water projects with proof. Your contribution makes a visible impact.">
-  <title>charity: water | Your Money, Our Mission, and Our Planet's Future</title>
+  <title>charity: water | Clean Water, Clear Accountability</title>
+
   <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-  <!-- Navigation -->
-  <header>
-    <nav class="main-nav">
-      <a href="#" class="logo">
-        <img src="charitywaterlogo.png" alt="charity: water logo">
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="#">
+        <img src="charitywaterlogo.png" alt="charity water logo">
       </a>
-      <button class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#mission">Our Mission</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#donate" class="donate-btn">Donate</a></li>
-      </ul>
-    </nav>
+
+      <button id="mobileToggle" class="mobile-toggle" aria-label="Open navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="main-nav" id="navLinks" aria-label="Main navigation">
+        <ul>
+          <li><a href="#mission">Our Mission</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#donate" class="donate-btn">Donate</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-inner container">
       <h1>Clean Water, Clear Accountability</h1>
-      <p>Track your impact through open data reporting. Transform lives through well construction and community maintenance. Real change starts with transparency and ends with measurable impact.</p>
-      <a href="#donate" class="hero-btn">Join the Mission</a>
+      <p class="lead">Track your impact through open data reporting. Transform lives through well construction and community maintenance. Real change starts with transparency and ends with measurable impact.</p>
+      <a class="btn primary" href="#donate">Join the Mission</a>
     </div>
   </section>
 
-  <!-- Mission Section -->
-  <section id="mission" class="mission">
-    <h2>Our Mission</h2>
-    <p>charity: water is a nonprofit organization bringing clean and safe drinking water to people in developing countries. Every project is tracked with photos and GPS coordinates so you can see your impact.</p>
+  <!-- MISSION -->
+  <section id="mission" class="section section-mission">
+    <div class="container">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-copy">charity: water is a nonprofit organization bringing clean and safe drinking water to people in developing countries. Every project is tracked with photos and GPS coordinates so you can see your impact.</p>
+    </div>
   </section>
 
-  <!-- Impact Section -->
-  <section id="impact" class="impact">
-    <h2>Our Impact</h2>
-    <div class="impact-stats">
-      <div class="stat-card">
-        <h3>150,000+</h3>
-        <p>Water Projects Funded</p>
-      </div>
-      <div class="stat-card">
-        <h3>17 Million+</h3>
-        <p>People Served</p>
-      </div>
-      <div class="stat-card">
-        <h3>29</h3>
-        <p>Countries Reached</p>
+  <!-- IMPACT -->
+  <section id="impact" class="section section-impact">
+    <div class="container">
+      <h2 class="section-title">Our Impact</h2>
+
+      <div class="impact-grid" role="list">
+        <div class="impact-card" role="listitem">
+          <div class="impact-number">150,000+</div>
+          <div class="impact-text">Water Projects Funded</div>
+        </div>
+
+        <div class="impact-card" role="listitem">
+          <div class="impact-number">17 Million+</div>
+          <div class="impact-text">People Served</div>
+        </div>
+
+        <div class="impact-card" role="listitem">
+          <div class="impact-number">29</div>
+          <div class="impact-text">Countries Reached</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Donation Section -->
-  <section id="donate" class="donate">
-    <div class="donate-container">
-      <h2>Make a Difference</h2>
-      <p>Your support helps build sustainable water systems, empowering communities for generations.</p>
-      <a href="#" class="donate-main-btn">Donate Now</a>
+  <!-- DONATE -->
+  <section id="donate" class="section section-donate">
+    <div class="container">
+      <div class="donate-card">
+        <h2>Make a Difference</h2>
+        <p>Your support helps build sustainable water systems, empowering communities for generations.</p>
+        <a class="btn accent" href="#">Donate Now</a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-links">
-        <h4>About</h4>
-        <ul>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-col">
+        <img src="charitywaterlogo.png" alt="charity: water logo" class="footer-logo">
+        <p class="muted">Bringing clean and safe drinking water to communities worldwide — with transparency.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul class="footer-links">
           <li><a href="#mission">Our Mission</a></li>
           <li><a href="#impact">Impact</a></li>
           <li><a href="#">Transparency</a></li>
         </ul>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-col">
         <h4>Get Involved</h4>
-        <ul>
+        <ul class="footer-links">
           <li><a href="#">Fundraise</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#donate">Donate</a></li>
         </ul>
       </div>
 
-      <div class="footer-links">
-        <h4>Follow Us</h4>
-        <ul>
-          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <ul class="socials">
+          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
         </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>© 2025 charity: water | All Rights Reserved</p>
+      <div class="container">
+        <p>© 2025 charity: water &middot; All Rights Reserved</p>
+      </div>
     </div>
   </footer>
 
   <script>
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
+    // mobile nav toggle
+    (function() {
+      const toggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('navLinks');
 
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      mobileToggle.innerHTML = navLinks.classList.contains('active')
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('open');
       });
-    });
+
+      // close mobile nav on link click
+      document.querySelectorAll('.main-nav a').forEach(a => {
+        a.addEventListener('click', () => {
+          nav.classList.remove('open');
+          toggle.classList.remove('open');
+        });
+      });
+    })();
   </script>
 </body>
 </html>
