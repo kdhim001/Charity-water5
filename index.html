@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -128,8 +127,9 @@
   </footer>
 
   <script>
-    // mobile nav toggle
+    // Enhanced JavaScript for extra credit features
     (function() {
+      // Mobile nav toggle
       const toggle = document.getElementById('mobileToggle');
       const nav = document.getElementById('navLinks');
 
@@ -138,13 +138,96 @@
         toggle.classList.toggle('open');
       });
 
-      // close mobile nav on link click
+      // Close mobile nav on link click
       document.querySelectorAll('.main-nav a').forEach(a => {
         a.addEventListener('click', () => {
           nav.classList.remove('open');
           toggle.classList.remove('open');
         });
       });
+
+      // Scroll animations for sections
+      const sections = document.querySelectorAll('.section');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // Stagger animation for impact cards
+            if (entry.target.id === 'impact') {
+              const cards = entry.target.querySelectorAll('.impact-card');
+              cards.forEach((card, index) => {
+                setTimeout(() => {
+                  card.classList.add('animated');
+                }, index * 200);
+              });
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      sections.forEach(section => observer.observe(section));
+
+      // Header scroll effect
+      const header = document.querySelector('.site-header');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 100) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Button ripple effects
+      document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          const ripple = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+          
+          ripple.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+          `;
+          ripple.classList.add('ripple');
+          
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      });
+
+      // Parallax effect for hero
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+          hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+      });
+
+      // Interactive impact cards with click effects
+      document.querySelectorAll('.impact-card').forEach(card => {
+        card.addEventListener('click', function() {
+          this.classList.add('clicked');
+          setTimeout(() => {
+            this.classList.remove('clicked');
+          }, 600);
+        });
+      });
+
+      // Loading animation
+      window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+      });
+
     })();
   </script>
 </body>
